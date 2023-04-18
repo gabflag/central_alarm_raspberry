@@ -1,0 +1,47 @@
+body {
+	background-color: #C9EBFF;
+}
+
+header, footer {
+	background-color: #53A7E0;
+	padding: 10px;
+}
+
+header h1 {
+	font-size: 36px;
+	color: #FFF;
+	margin: 0;
+}
+
+header h2 {
+	font-size: 24px;
+	color: #FFF;
+	margin: 0;
+}
+
+section {
+	background-color: #FFF;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+section h3 {
+	font-size: 24px;
+	color: #53A7E0;
+	margin-top: 0;
+}
+
+button {
+	background-color: #53A7E0;
+	color: #FFF;
+	font-size: 18px;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #2D6FA2;
+}
