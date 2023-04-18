@@ -2,6 +2,9 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+# Configurar o diretório para arquivos estáticos
+app.static_folder = 'static'
+
 @app.route('/')
 def index():
     return render_template("index.html", title="Alarm Central With ARM", author="Desenvolvido por Gabriel")
