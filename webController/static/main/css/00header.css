@@ -5,11 +5,19 @@
     padding: 10px;
 }
 
-.column {
-    display: flex;
-    align-items: center;
+.header{
+   padding-left:70px;
 }
 
+.headerOption{
+   padding-right: 70px;
+}
+
+a {
+    text-decoration: none;
+    text-decoration: none;
+    color:green;
+}
 
 .header-line {
     border: none;

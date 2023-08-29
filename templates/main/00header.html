@@ -1,7 +1,23 @@
 {% load static %}
-{% load static %}
 <link rel="stylesheet" href="{% static 'main/css/00header.css'%}"/>
 <link rel="stylesheet" href="{% static 'main/css/02global.css'%}"/>
-<br>
-<br>
+
+<div class="header">
+    <h1>
+        <a href="/">Central Raspy</a>
+    </h1>
+
+    <div class="headerOption">
+        {% if user.is_authenticated %}
+            <a href="dashboard/">
+                <h2>Dashboard</h2>
+            </a>
+        {% else %}
+            <a href="login/">
+                <h2>Login</h2>
+            </a>
+        {% endif %}
+    </div>
+</div>
+
 <hr class="header-line"></hr>
