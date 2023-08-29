@@ -1,0 +1,14 @@
+.footer-line {
+    border: none;
+    background-color: #000000;
+    opacity: 0.15;
+    height: 1px;
+    margin: 15px 80px;
+  }
+  
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+  }

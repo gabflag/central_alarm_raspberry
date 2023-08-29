@@ -9,8 +9,10 @@ from django.shortcuts import render, redirect
 def dashboard(request):
     return render(request, 'main/dashboard.html')
 
+
 def home(request):
     return render(request, 'main/home.html')
+
 
 def signup(request):
     if request.method == 'POST':

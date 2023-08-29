@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+}
+
+
+.header-line {
+    border: none;
+    background-color: #000000;
+    opacity: 0.15;
+    height: 1px;
+    margin: 0 80px;
+}
+
