@@ -1,0 +1,35 @@
+.mainTitle{
+    color: #BC1142;
+    text-shadow: 0 0 10px rgba(188, 17, 66, 0.1), 0 0 5px rgba(188, 17, 66, 0.8);
+    font-size: 70px;
+    margin-top: 50px; 
+    padding-top: 20px;
+    line-height: 0.96; 
+}
+
+.loginPage{
+    border-radius: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-bottom:150px;
+    box-shadow: 0 0 5px #ffffffa2, 0 0 15px #ffffff70, 0 0 30px #ffffff48, 0 0 60px #ffffff3a;
+}
+
+.bottonLogin {
+    padding: 15px 40px;
+    border-radius: 15px;
+    color: white;
+    background-color:#BC1142;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0px #ffffff;
+    margin-right: 1200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out; 
+}
+
+.bottonLogin:hover {
+    box-shadow: 0 0 130px 1px #ffffff, 0 0 20px 4px #ffffff, 0 0 40px 6px #ffffffd2, 0 0 80px 8px #ffffff;
+}
