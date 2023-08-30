@@ -6,19 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'main/css/03home.css' %}"/>
     <link rel="stylesheet" href="{% static 'main/css/02global.css' %}"/>
-    
-
     <title>Home</title>
 </head>
 <body>
     
     {% include 'main/00header.html' %}
     <div class="container-Global">
-        <h1>
-
-            Escopo pagina home
-
-        </h1>
+        
+        <div class="homePage">
+            <h1 class="title">
+                Alarm Control Center<br>
+                RaspyBerry
+            </h1>
+            <h3 class="subTitle">
+                Log in to take advantage of the <br>
+                ARM Arquitera's protection.
+            </h3>
+            <div class="imageRaspberry">
+                <img src="{% static 'main/images/raspberryLogo.svg'%}" class="raspberryLogo">
+            </div>
+        </div>
 
         {% include 'main/01footer.html' %}
     </div>

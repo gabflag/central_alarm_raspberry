@@ -1,0 +1,19 @@
+.title{
+    color: rgb(15, 4, 4);
+    font-size: 70px;
+    margin-top: 50px; 
+    line-height: 0.96; 
+}
+   
+
+.subTitle{
+    color: rgba(41, 11, 11, 0.822);
+    font-size: 25px;
+    margin-top: -20px;
+}
+
+      
+.raspberryLogo {
+    width: 200px; 
+    height: auto; 
+}

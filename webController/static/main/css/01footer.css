@@ -5,10 +5,11 @@
     height: 1px;
     margin: 15px 80px;
   }
-  
-  .footer {
+
+  .footer-text {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 10px;
+    justify-content: center;
+    color: rgb(41, 11, 11);
+    font-size: 16px;
+    font-weight: bold;
   }
