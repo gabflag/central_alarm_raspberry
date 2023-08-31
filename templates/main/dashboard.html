@@ -6,19 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'main/css/03home.css' %}"/>
     <link rel="stylesheet" href="{% static 'main/css/02global.css' %}"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <title>Dashboard</title>
 </head>
 <body>
     
     {% include 'main/00header.html' %}
-    <div class="container-Global">
-        <h1>
+        <div class="container-Global">
 
-            Escopo pagina Dashboard
+        <h1>Dashboard</h1>
 
-        </h1>
+        <p>Estado: <span id="estado">{{ ligado_desligado }}</span></p>
+        <p>Mensagens: <span id="mensagens">{{ mensagens }}</span></p>
+        
+        <form method="post" id="ligarDesligarForm">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="ligar_desligar">
+            <button type="button" class="actionButton" data-target="estado">Ligar/Desligar</button>
+        </form>
+        
+        <p>Make Noise</p>
+            <form method="post" id="evento01Form">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="evento_01">
+                <button type="button" class="actionButton" data-target="mensagens">Trigger Alar</button>
+            </form>
 
+            
+        <p>Access Live Cameras</p>
+            <form method="post" id="evento02Form">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="evento_02">
+                <button type="button" class="actionButton" data-target="mensagens">Camera 01</button>
+            </form>
+    
+        <p>Trigger effects devices</p>
+
+            <form method="post" id="evento03Form">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="evento_03">
+                <button type="button" class="actionButton" data-target="mensagens">Fireworks</button>
+            </form>
+
+            <form method="post" id="evento04Form">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="evento_04">
+                <button type="button" class="actionButton" data-target="mensagens">Bomb in the garage</button>
+            </form>
+
+            <form method="post" id="evento05Form">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="evento_05">
+                <button type="button" class="actionButton" data-target="mensagens">Bomb at the front door</button>
+            </form>
+
+        <script>
+            $(document).ready(function() {
+                $(".actionButton").on("click", function() {
+                    var form = $(this).closest("form");
+                    var targetId = $(this).data("target");
+                    $.post(form.attr("action"), form.serialize(), function(response) {
+                        $("#" + targetId).text(response[targetId]);
+                    }, "json");
+                });
+            });
+        </script>
+        
         {% include 'main/01footer.html' %}
     </div>
 
