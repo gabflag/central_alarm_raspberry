@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'main/css/03home.css' %}"/>
+    <link rel="stylesheet" href="{% static 'main/css/05dashboard.css' %}"/>
     <link rel="stylesheet" href="{% static 'main/css/02global.css' %}"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
@@ -13,53 +13,68 @@
 <body>
     
     {% include 'main/00header.html' %}
-        <div class="container-Global">
+    <div class="container-Global">
 
-        <h1>Dashboard</h1>
+        <h1 class="title">Dashboard</h1>
 
-        <p>Estado: <span id="estado">{{ ligado_desligado }}</span></p>
-        <p>Mensagens: <span id="mensagens">{{ mensagens }}</span></p>
-        
-        <form method="post" id="ligarDesligarForm">
-            {% csrf_token %}
-            <input type="hidden" name="action" value="ligar_desligar">
-            <button type="button" class="actionButton" data-target="estado">Ligar/Desligar</button>
-        </form>
-        
-        <p>Make Noise</p>
+        <div class="container">
+            <form method="post" id="ligarDesligarForm">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="ligar_desligar">
+                <button type="button" class="actionButton" data-target="estado">Turn On/Off</button>
+            </form>
+
+            <div class="imageRaspberry">
+                <img src="{% static 'main/images/raspberryLogo.svg'%}" class="raspberryLogo">
+            </div>
+
+            <p class="estado">State: <span id="estado">{{ ligado_desligado }}</span></p>
+        </div>
+
+        <br>
+
+        <p class="mensagens">Mensagens: <span  id="mensagens">{{ mensagens }}</span></p>
+
+        <p class="subTitle">Make Noise</p>
             <form method="post" id="evento01Form">
                 {% csrf_token %}
                 <input type="hidden" name="action" value="evento_01">
-                <button type="button" class="actionButton" data-target="mensagens">Trigger Alar</button>
+                <button type="button" class="actionButton" data-target="mensagens">Trigger Alarm</button>
             </form>
 
-            
-        <p>Access Live Cameras</p>
+        <p class="subTitle">Access Live Cameras</p>
             <form method="post" id="evento02Form">
                 {% csrf_token %}
                 <input type="hidden" name="action" value="evento_02">
                 <button type="button" class="actionButton" data-target="mensagens">Camera 01</button>
             </form>
     
-        <p>Trigger effects devices</p>
 
-            <form method="post" id="evento03Form">
-                {% csrf_token %}
-                <input type="hidden" name="action" value="evento_03">
-                <button type="button" class="actionButton" data-target="mensagens">Fireworks</button>
-            </form>
+        <p class="subTitle">Trigger effects devices</p>
 
-            <form method="post" id="evento04Form">
-                {% csrf_token %}
-                <input type="hidden" name="action" value="evento_04">
-                <button type="button" class="actionButton" data-target="mensagens">Bomb in the garage</button>
-            </form>
+            <div class="form-container">
+                <form method="post" id="evento03Form">
+                    {% csrf_token %}
+                    <input type="hidden" name="action" value="evento_03">
+                    <button type="button" class="actionButton" data-target="mensagens">Fireworks</button>
+                </form>
+            </div>
 
-            <form method="post" id="evento05Form">
-                {% csrf_token %}
-                <input type="hidden" name="action" value="evento_05">
-                <button type="button" class="actionButton" data-target="mensagens">Bomb at the front door</button>
-            </form>
+            <div class="form-container">
+                <form method="post" id="evento04Form">
+                    {% csrf_token %}
+                    <input type="hidden" name="action" value="evento_04">
+                    <button type="button" class="actionButton" data-target="mensagens">Bomb in the garage</button>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <form method="post" id="evento05Form">
+                    {% csrf_token %}
+                    <input type="hidden" name="action" value="evento_05">
+                    <button type="button" class="actionButton" data-target="mensagens">Bomb at the front door</button>
+                </form>
+            </div>
 
         <script>
             $(document).ready(function() {
@@ -72,9 +87,10 @@
                 });
             });
         </script>
-        
-        {% include 'main/01footer.html' %}
+    {% include 'main/01footer.html' %} 
     </div>
+
+
 
 </body>
 </html>

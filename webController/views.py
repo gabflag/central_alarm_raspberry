@@ -14,9 +14,9 @@ def dashboard(request):
     if request.method == 'GET':
         mensagem = func_resume_of_central()
         if state_of_central:
-            return render(request, 'main/dashboard.html', {'ligado_desligado': 'Ligado', 'mensagens': mensagem})
+            return render(request, 'main/dashboard.html', {'ligado_desligado': 'On', 'mensagens': mensagem})
         else:
-            return render(request, 'main/dashboard.html', {'ligado_desligado': 'Desligado', 'mensagens': mensagem})
+            return render(request, 'main/dashboard.html', {'ligado_desligado': 'Off', 'mensagens': mensagem})
     
 
     elif request.method == 'POST':
@@ -26,9 +26,9 @@ def dashboard(request):
         if action == 'ligar_desligar':
 
             if state_of_central:
-                return JsonResponse({'estado': 'Ligado'})
+                return JsonResponse({'estado': 'On'})
             else:
-                return JsonResponse({'estado': 'Desligado'})
+                return JsonResponse({'estado': 'Off'})
 
         elif action == 'evento_01':
             retorn_function = func_01()

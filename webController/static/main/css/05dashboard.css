@@ -1,0 +1,64 @@
+.title{
+    color: rgb(118, 169, 40);
+    font-size: 90px;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgb(118, 169, 40), 0 0 5px rgb(118, 169, 40);
+    margin-top: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+}
+
+.subTitle{
+    color:  rgb(94, 94, 94);
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom:0px;
+}
+      
+.raspberryLogo {
+    width: 80px; 
+    height: auto; 
+}
+
+.mensagens{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.747);
+    border-radius: 15px;
+}
+
+.form-container {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.estado{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.container form,
+.container p,
+.container .imageRaspberry {
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px; 
+  }
+
+
+.actionButton{
+    padding: 15px 40px;
+    border-radius: 15px;
+    color: white;
+    background-color:#e00241f3;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0px #ffffff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out; 
+}
+
+.actionButton:hover {
+    box-shadow: 0 0 130px 1px #ffffff, 0 0 20px 4px #ffffff, 0 0 40px 6px #ffffffd2, 0 0 80px 8px #ffffff;
+}
