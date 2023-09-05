@@ -8,7 +8,8 @@ Central de Alarne
 
 ![image](https://github.com/gabflag/central_alarm_raspberry/assets/95552879/dd3e9398-25c5-4dd2-811b-669e93f253b2)
 
-![image](https://github.com/gabflag/central_alarm_raspberry/assets/95552879/b88da95c-b9d8-4f7a-86e6-bd1e47ead67f)
+![image](https://github.com/gabflag/central_alarm_raspberry/assets/95552879/d8aa701d-fa9e-42a6-bd09-b69c172d171d)
+
 
 
 # Objetives
