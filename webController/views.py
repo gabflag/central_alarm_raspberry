@@ -12,43 +12,41 @@ def dashboard(request):
     state_of_central = func_state_of_central()
 
     if request.method == 'GET':
-        mensagem = func_resume_of_central()
+        message = func_resume_of_central()
         if state_of_central:
-            return render(request, 'main/dashboard.html', {'ligado_desligado': 'On', 'mensagens': mensagem})
+            return render(request, 'main/dashboard.html', {'Powered_On_or_Off': 'On', 'messages': message})
         else:
-            return render(request, 'main/dashboard.html', {'ligado_desligado': 'Off', 'mensagens': mensagem})
+            return render(request, 'main/dashboard.html', {'Powered_On_or_Off': 'Off', 'messages': message})
     
-
     elif request.method == 'POST':
     
         action = request.POST.get('action')
-
-        if action == 'ligar_desligar':
-
+        print(action)
+        if action == 'on_off_button':
             if state_of_central:
-                return JsonResponse({'estado': 'On'})
+                return JsonResponse({'state': 'On'})
             else:
-                return JsonResponse({'estado': 'Off'})
+                return JsonResponse({'state': 'Off'})
 
-        elif action == 'evento_01':
+        elif action == 'event_01':
             retorn_function = func_01()
-            return JsonResponse({'mensagens': retorn_function})
+            return JsonResponse({'messages': retorn_function})
 
-        elif action == 'evento_02':
+        elif action == 'event_02':
             retorn_function = func_02()
-            return JsonResponse({'mensagens': retorn_function})
+            return JsonResponse({'messages': retorn_function})
 
-        elif action == 'evento_03':
+        elif action == 'event_03':
             retorn_function = func_03()
-            return JsonResponse({'mensagens': retorn_function})
+            return JsonResponse({'messages': retorn_function})
 
-        elif action == 'evento_04':
+        elif action == 'event_04':
             retorn_function = func_04()
-            return JsonResponse({'mensagens': retorn_function})
+            return JsonResponse({'messages': retorn_function})
 
-        elif action == 'evento_05':
+        elif action == 'event_05':
             retorn_function = func_05()
-            return JsonResponse({'mensagens': retorn_function})
+            return JsonResponse({'messages': retorn_function})
 
 
 def home(request):
@@ -71,27 +69,27 @@ def func_state_of_central():
     return random.choice([True, False])
 
 def func_resume_of_central():
-    mensagem = "Tudo ok com a central"
-    return mensagem
+    message = "Everything ok with the central"
+    return message
 
 def func_01():
-    mensagem = "Função 01"
-    return mensagem
+    message = "Function 01"
+    return message
 
 def func_02():
-    mensagem = "Função 02"
-    return mensagem
+    message = "Function 02"
+    return message
 
 def func_03():
-    mensagem = "Função 03"
-    return mensagem
+    message = "Function 03"
+    return message
 
 def func_04():
-    mensagem = "Função 04"
-    return mensagem
+    message = "Function 04"
+    return message
 
 def func_05():
-    mensagem = "Função 05"
-    return mensagem
+    message = "Function 05"
+    return message
 
 

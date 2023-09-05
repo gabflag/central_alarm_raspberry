@@ -18,65 +18,65 @@
         <h1 class="title">Dashboard</h1>
 
         <div class="container">
-            <form method="post" id="ligarDesligarForm">
+            <form method="post" id="turnOnorOffForm">
                 {% csrf_token %}
-                <input type="hidden" name="action" value="ligar_desligar">
-                <button type="button" class="actionButton" data-target="estado">Turn On/Off</button>
+                <input type="hidden" name="action" value="on_off_button">
+                <button type="button" class="actionButton" data-target="state">Turn On/Off</button>
             </form>
 
             <div class="imageRaspberry">
                 <img src="{% static 'main/images/raspberryLogo.svg'%}" class="raspberryLogo">
             </div>
 
-            <p class="estado">State: <span id="estado">{{ ligado_desligado }}</span></p>
+            <p class="state">State: <span id="state">{{ Powered_On_or_Off }}</span></p>
         </div>
 
         <br>
 
-        <p class="mensagens">Mensagens: <span  id="mensagens">{{ mensagens }}</span></p>
+        <p class="messages">Messages: <span  id="messages">{{ messages }}</span></p>
 
         <p class="subTitle">Make Noise</p>
-            <form method="post" id="evento01Form">
+            <form method="post" id="event01Form">
                 {% csrf_token %}
-                <input type="hidden" name="action" value="evento_01">
-                <button type="button" class="actionButton" data-target="mensagens">Trigger Alarm</button>
+                <input type="hidden" name="action" value="event_01">
+                <button type="button" class="actionButton" data-target="messages">Trigger Alarm</button>
             </form>
 
         <p class="subTitle">Access Live Cameras</p>
-            <form method="post" id="evento02Form">
+            <form method="post" id="event02Form">
                 {% csrf_token %}
-                <input type="hidden" name="action" value="evento_02">
-                <button type="button" class="actionButton" data-target="mensagens">Camera 01</button>
+                <input type="hidden" name="action" value="event_02">
+                <button type="button" class="actionButton" data-target="messages">Camera 01</button>
             </form>
     
 
         <p class="subTitle">Trigger effects devices</p>
 
             <div class="form-container">
-                <form method="post" id="evento03Form">
+                <form method="post" id="event03Form">
                     {% csrf_token %}
-                    <input type="hidden" name="action" value="evento_03">
-                    <button type="button" class="actionButton" data-target="mensagens">Fireworks</button>
+                    <input type="hidden" name="action" value="event_03">
+                    <button type="button" class="actionButton" data-target="messages">Fireworks</button>
                 </form>
             </div>
 
             <div class="form-container">
-                <form method="post" id="evento04Form">
+                <form method="post" id="event04Form">
                     {% csrf_token %}
-                    <input type="hidden" name="action" value="evento_04">
-                    <button type="button" class="actionButton" data-target="mensagens">Bomb in the garage</button>
+                    <input type="hidden" name="action" value="event_04">
+                    <button type="button" class="actionButton" data-target="messages">Bomb in the garage</button>
                 </form>
             </div>
 
             <div class="form-container">
-                <form method="post" id="evento05Form">
+                <form method="post" id="event05Form">
                     {% csrf_token %}
-                    <input type="hidden" name="action" value="evento_05">
-                    <button type="button" class="actionButton" data-target="mensagens">Bomb at the front door</button>
+                    <input type="hidden" name="action" value="event_05">
+                    <button type="button" class="actionButton" data-target="messages">Bomb at the front door</button>
                 </form>
             </div>
 
-        <script>
+        <script> 
             $(document).ready(function() {
                 $(".actionButton").on("click", function() {
                     var form = $(this).closest("form");

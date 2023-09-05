@@ -21,7 +21,7 @@
     height: auto; 
 }
 
-.mensagens{
+.messages{
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.747);
     border-radius: 15px;
@@ -32,7 +32,7 @@
     margin-right: 20px;
 }
 
-.estado{
+.state{
     font-size: 20px;
     font-weight: 600;
 }
