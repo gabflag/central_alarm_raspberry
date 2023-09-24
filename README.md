@@ -23,3 +23,7 @@ Useful commands for CLI:
    
   - pinout
 
+
+Useful documentations:
+
+   - https://www.raspberrypi.com/documentation/computers/os.html
